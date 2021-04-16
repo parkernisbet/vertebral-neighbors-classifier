@@ -1,1 +1,5 @@
-# vertebral-neighbors-classifier
+# Vertebral Neighbors Classifier
+
+This dataset comes from the UCI Machine Learning repository "[Vertebral Column Data Set](https://archive.ics.uci.edu/ml/datasets/Vertebral+Column)". My objective was to scratch-implement a multivariate nearest neighbor model to predict orthopaedic patient vertebral class, those being: normal (0), disk hernia (1), or spondilolysthesis (2). While this repo contains two column tables, only the "column_3C.dat" file was used for classification. Said table contains a total of six biomechanical features for each of the 310 patients in this dataset.
+
+The classifier was then fine-tuned using two separate distance metrics, "Euclidean" (least squared distance) and "Manhattan" (least absolute distance), to minimize error rates. My code was finally refactored using sklearn.neighbors.KNeighborsClassifier methods and then compared against the original implementations, using the same optimal k-neighbors values. The only notable difference between the two nearest neighbor implementations was the rather significant performance boost seen by relying on sklearn's purpore-built ML module.
